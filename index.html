@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FitForge | Start Your Transformation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+
+
+
+
+
+
+<style>
+  body {
+    background: linear-gradient(to bottom right, #ffe4e1, #ddb2c9);
+    color: #2b2b2b;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  h1, h2, h3 {
+    color: #9b1b52;
+    text-align: center;
+  }
+  .tagline {
+    color: #d63384;
+    font-style: italic;
+    font-weight: 600;
+  }
+  button {
+    background-color: #9b1b52;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  button:hover {
+    transform: translateY(-2px);
+    background-color: #7f1643;
+  }
+  .calendar .day {
+    border: 3px solid #9b1b52;
+    background-color: #ffe4e1;
+    transition: background-color 0.3s, border 0.3s;
+  }
+  .calendar .day.completed {
+    background-color: #ffdfe8;
+  }
+  .calendar .day.current {
+    border-color: #7f1643;
+    background-color: #ffc7d0;
+  }
+</style>
+
+</head>
+<body>
+
+<div style="text-align:center; margin: 20px auto;">
+  <img src="https://tse2.mm.bing.net/th?id=OIP.N1CTh29B9Zw4K5wMFJs1KAAAAA&pid=Api" alt="Independent Woman Banner" style="max-width:100%; border-radius:12px;">
+</div>
+
+  <h1>💪 Let's Build Your Program</h1>
+<h3 class="tagline">Reach your goals in&nbsp;10–12&nbsp;weeks!</h3>
+
+  <form id="commitment-form" action="home.html" method="get" onsubmit="saveMode()">
+    <label for="q1">1. What inspired you to take the first step toward changing your health?</label>
+    <textarea name="q1" id="q1" required></textarea>
+
+    <label for="q2">2. How would your life improve if you reached your fitness goals?</label>
+    <textarea name="q2" id="q2" required></textarea>
+
+    <label for="q3">3. What's held you back in the past from staying consistent?</label>
+    <textarea name="q3" id="q3" required></textarea>
+
+    <label for="q4">4. What is your #1 fitness goal right now?</label>
+    <textarea name="q4" id="q4" required></textarea>
+
+    <label for="q5">5. How long have you wanted to make this change?</label>
+    <input type="text" name="q5" id="q5" required />
+
+    <label for="q6">6. What happens if nothing changes in the next 6 months?</label>
+    <textarea name="q6" id="q6" required></textarea>
+
+    <label for="q7">7. On a scale from 1 to 10, how committed are you to your transformation?</label>
+    <select name="q7" id="q7" required>
+      <option value="">-- Select --</option>
+      <option value="1">1 - Not at all</option>
+      <option value="5">5 - Somewhat</option>
+      <option value="10">10 - Fully committed</option>
+    </select>
+
+    <label for="q8">8. Have you ever worked with a coach before? What was that experience like?</label>
+    <textarea name="q8" id="q8" required></textarea>
+
+    <label for="q9">9. What kind of accountability would help you most — tough love or encouragement?</label>
+    <input type="text" name="q9" id="q9" required />
+
+    <label for="q10">10. If you had a coach guiding you, what would you expect to be different in 90 days?</label>
+    <textarea name="q10" id="q10" required></textarea>
+
+    <div class="mode-toggle">
+      <label><input type="radio" name="mode" value="demo" checked> Demo Mode</label>
+      <label><input type="radio" name="mode" value="live"> Live Mode (Login Required)</label>
+    </div>
+
+    <button type="submit">🚀 Setup Your Program</button>
+  </form>
+
+  <script>
+    function saveMode() {
+      const mode = document.querySelector('input[name="mode"]:checked').value;
+      localStorage.setItem('fitforgeDemoMode', mode === 'demo' ? 'true' : '');
+    }
+  </script>
+</body>
+</html>
